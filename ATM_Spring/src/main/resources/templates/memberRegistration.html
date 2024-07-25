@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/memberRegistration.css}" rel="stylesheet" type="text/css"/>
+<title>会員登録画面</title>
+</head>
+
+<body>
+	
+	<div style="text-align: center" class="menu">
+	  <p><font size="7">あなたの情報を入力してください</font></p>
+　  </div>
+	
+    <form method="post" th:action="@{/RegistrationSuccess}" class="center"> <!-- ログイン処理のパスを指定  -->
+    
+    	<div style="text-align: center" class="username">
+        	<font size="7"><label>お名前:</label></font>
+        	<input type="text" id="userName" name="userName"
+        	style="width:250px; height:60px; font-size:40px;"> <!-- ユーザ名の登録 -->
+    	</div>
+    
+    	<div style="text-align: center" class="id">
+        	<font size="7"><label>ID:</label></font>
+        	<input type="text" id="userID" name="userID"
+        	style="width:250px; height:60px; font-size:40px;"> <!-- ユーザIDの登録 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="password">
+	        <font size="7"><label>パスワード:</label></font>
+	        <input type="password" id="password" name="password"
+	        style="width:350px; height:60px; font-size:40px;"> <!-- パスワードの登録 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="Repassword">
+	        <font size="7"><label>パスワード(再確認):</label></font>
+	        <input type="password" id="Repassword" name="Repassword"
+	        style="width:350px; height:60px; font-size:40px;"> <!-- パスワードの再確認 -->
+    	</div>
+    	
+    	<div style="text-align: center" class="message">
+        	<font size = 5><h1 th:text="${message}"></h1></font>
+    	</div> 	   
+    	
+    	<div style="text-align: center" class="submit">
+     	   <input type="submit" id="submit" value="登録"
+     	   style="width:225px; height:75px; font-size:45px;">
+    	</div>
+    	
+    </form>
+</body>
+
+</html>

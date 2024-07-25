@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/css/index.css}" rel="stylesheet" type="text/css"/>
+<title>ATM模擬アプリ開始画面</title>
+</head>
+
+<body>
+  
+   <form method="post" th:action="@{/MemberRegistration}" class="center"> <!-- 会員登録  -->
+       
+    	<div style="text-align: center" class="id">
+        	<font size="7"><label>会員登録の方</label></font>
+    	</div>
+    	
+    	<div style="text-align: center" class="submit">
+     	   <input type="submit" id="Member" value="会員登録"
+     	   style="width:225px; height:75px; font-size:45px;">
+    	</div>
+    	
+    </form>
+    
+    <form method="post" th:action="@{/loginPage}" class="center"> <!-- ログイン画面に遷移  -->    
+    	<div style="text-align: center" class="password">
+	        <font size="7"><label>ログインの方</label></font>
+    	</div>
+    	
+    	<div style="text-align: center" class="submit">
+     	   <input type="submit" id="login" value="ログイン"
+     	   style="width:225px; height:75px; font-size:45px;">
+    	</div>    	
+    </form>
+   
+</body>
+</html>

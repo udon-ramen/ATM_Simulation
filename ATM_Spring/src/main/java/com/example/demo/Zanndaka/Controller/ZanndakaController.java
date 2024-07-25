@@ -1,0 +1,40 @@
+package com.example.demo.Zanndaka.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.Login.service.AccountUserDetails;
+import com.example.demo.Zanndaka.Repository.ZanndakaDao;
+
+@Controller
+public class ZanndakaController {
+	
+	@Autowired
+	private ZanndakaDao Z_Dao;
+	
+	private String UserID;
+	private int zanndaka;
+	
+	public ZanndakaController() {
+		this.UserID = null;
+		this.zanndaka = 0;
+	}
+
+	@PostMapping("/zanndaka")
+    public ModelAndView Azukeire(@AuthenticationPrincipal AccountUserDetails user){
+		
+		ModelAndView mod = new ModelAndView();		
+		//ログイン中のユーザID
+		UserID = user.getID();
+		
+		this.zanndaka = Z_Dao.CalculateZanndaka(UserID);				
+		mod.setViewName("zanndaka");
+		mod.addObject("zanndaka", this.zanndaka + "円です");
+		return mod;
+
+	}
+
+}

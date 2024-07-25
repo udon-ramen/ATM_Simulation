@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.username{
+/*	margin-top: 10px;*/
+/*    margin-bottom: 30px;*/
+    margin: 30px 50px 10px 120px;
+}
+
+.id{
+/*	margin-top: 10px;*/
+/*    margin-bottom: 30px;*/
+    margin: 10px 0 10px 165px;
+}
+
+.password{
+    margin: 10px 50px 10px 130px;
+}
+
+.Repassword{
+    margin: 10px 130px 10px 30px;
+}
+
+.submit{
+    margin: 10px 30px 10px 30px;
+}
