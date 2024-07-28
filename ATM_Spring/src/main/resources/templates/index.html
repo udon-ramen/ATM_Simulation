@@ -8,14 +8,19 @@
 </head>
 
 <body>
+	
+	<div style="text-align: center" class="title">
+			<font size="7"><label>ATM模擬アプリ開始画面</label></font>
+    </div>
   
    <form method="post" th:action="@{/MemberRegistration}" class="center"> <!-- 会員登録  -->
        
-    	<div style="text-align: center" class="id">
-        	<font size="7"><label>会員登録の方</label></font>
-    	</div>
+<!--    	<div style="text-align: center" class="regist">-->
+<!--        	<font size="7"><label>会員登録の方は、「会員登録」ボタンをクリック</label></font>-->
+<!--    	</div>-->
     	
-    	<div style="text-align: center" class="submit">
+    	<div style="text-align: center" class="registbtn">
+			<font size="7"><label>会員登録：</label></font>
      	   <input type="submit" id="Member" value="会員登録"
      	   style="width:225px; height:75px; font-size:45px;">
     	</div>
@@ -23,11 +28,12 @@
     </form>
     
     <form method="post" th:action="@{/loginPage}" class="center"> <!-- ログイン画面に遷移  -->    
-    	<div style="text-align: center" class="password">
-	        <font size="7"><label>ログインの方</label></font>
-    	</div>
+<!--    	<div style="text-align: center" class="login">-->
+<!--	        <font size="7"><label>ログインの方は、「ログイン」ボタンをクリック</label></font>-->
+<!--    	</div>-->
     	
-    	<div style="text-align: center" class="submit">
+    	<div style="text-align: center" class="loginbtn">
+			<font size="7"><label>ログイン：</label></font>
      	   <input type="submit" id="login" value="ログイン"
      	   style="width:225px; height:75px; font-size:45px;">
     	</div>    	
