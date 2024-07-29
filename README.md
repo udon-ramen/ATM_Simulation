@@ -1,5 +1,11 @@
 # ATM_Simulation  
 
+フロントエンド：HTML, CSS
+バックエンド：Java
+フレームワーク：SpringBoot, Spring Security, Spring Data Jpa
+データベース：PostgreSQL
+IDE：Eclipse 2023
+
 「ATM模擬アプリ開始」画面  
 ・会員登録ボタン→会員登録画面へ遷移  
 ・ログインボタン→ログイン画面へ遷移  
